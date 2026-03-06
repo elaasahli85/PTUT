@@ -11,7 +11,8 @@ INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES
                                                        (7, 'Vitamines et Compléments', 'Suppléments nutritionnels'),
                                                        (8, 'Médicaments Cardiovasculaires', 'Médicaments pour le cœur et la circulation'),
                                                        (9, 'Médicaments Gastro-intestinaux', 'Médicaments pour les troubles digestifs'),
-                                                       (10, 'Médicaments Respiratoires', 'Médicaments pour les troubles respiratoires');
+                                                       (10, 'Médicaments Respiratoires', 'Médicaments pour les troubles respiratoires')
+                                                        ON CONFLICT (CODE) DO NOTHING;
 
 ALTER TABLE CATEGORIE ALTER COLUMN CODE RESTART WITH 11;
 
@@ -21,7 +22,9 @@ ALTER TABLE CATEGORIE ALTER COLUMN CODE RESTART WITH 11;
 INSERT INTO FOURNISSEUR (ID, NOM, EMAIL) VALUES
                                              (1, 'PharmaPlus', 'alice.dupont@pharmaplus.com'),
                                              (2, 'MediWorld', 'bob.martin@mediworld.com'),
-                                             (7, 'Fournisseur Test', 'elaasahli85@gmail.com');
+                                             (7, 'Fournisseur Test', 'elaasahli85@gmail.com')
+    ON CONFLICT (ID) DO NOTHING;
+
 
 ALTER TABLE FOURNISSEUR ALTER COLUMN ID RESTART WITH 8;
 
