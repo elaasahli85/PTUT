@@ -35,7 +35,8 @@ INSERT INTO fournisseur_categorie (categorie_code, fournisseur_id) VALUES
                                                                        (7, 1),  -- Vitamines -> PharmaPlus
                                                                        (3, 2),  -- Antibiotiques -> MediWorld
                                                                        (2, 7),  -- Anti-inflammatoires -> Fournisseur Test
-                                                                       (1, 7);  -- Antalgiques -> Fournisseur Test
+                                                                       (1, 7)
+                                                                    ON CONFLICT (categorie_code, fournisseur_id) DO NOTHING;-- Antalgiques -> Fournisseur Test
 -- =====================================================
 -- INSERTION DES MEDICAMENTS (SANS FOURNISSEUR_ID)
 -- =====================================================
