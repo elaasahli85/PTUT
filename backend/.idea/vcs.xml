@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/backend/SpringAjax" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringAjax" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ptut-Play-N-Ride" vcs="Git" />
   </component>
 </project>
